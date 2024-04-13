@@ -1,0 +1,13 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[requires]
+python_version = "3.7"
+
+[dev-packages]
+
+[packages]
+requests-futures = "*"
+requests = "==2.25.1"
