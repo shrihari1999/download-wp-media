@@ -1,14 +1,13 @@
 # Wordpress media downloader
 The fastest way to download all media from any wordpress site.
 
-## Run
+## Install
 As a prerequisite, make sure you have python, pip and pipenv installed.
 
 Activate shell, install required packages and run
 ```
 pipenv shell
 pipenv install
-python download_wp_media.py
 ```
 
 ## Usage
