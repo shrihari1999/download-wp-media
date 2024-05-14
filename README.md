@@ -18,7 +18,6 @@ positional arguments:
 
 optional arguments:
   -h, --help           show this help message and exit
-  --max_page MAX_PAGE  max number of pages to scan
   --per_page PER_PAGE  number of media elements per page
 ```
 

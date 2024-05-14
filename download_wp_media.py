@@ -7,17 +7,17 @@ from urllib.parse import parse_qs
 
 parser=argparse.ArgumentParser()
 parser.add_argument("domain", help='wordpress domain')
-parser.add_argument("--max_page", help='max number of pages to scan', default=252)
 parser.add_argument("--per_page", help='number of media elements per page', default=100)
 args=parser.parse_args()
 
 domain = args.domain
 per_page = args.per_page
-max_page = args.max_page
+url = f"https://{domain}/wp-json/wp/v2/media"
+response = requests.get(f"{url}?per_page={per_page}")
+max_page = int(response.headers['X-WP-TotalPages'])
 
 BASE_DIR = Path(__file__).resolve(strict=True).parent
 DOWNLOAD_DIR = os.path.join(BASE_DIR, os.path.join('downloads', domain))
-url = f"https://{domain}/wp-json/wp/v2/media"
 
 page_session = FuturesSession()
 page_futures = []
